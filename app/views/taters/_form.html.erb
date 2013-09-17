@@ -1,0 +1,17 @@
+<%= form_for(@tater) do |f| %>
+  <% if @tater.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tater.errors.count, "error") %> prohibited this tater from being saved:</h2>
+
+      <ul>
+      <% @tater.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
