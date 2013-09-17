@@ -1,4 +1,7 @@
 Gitdemo::Application.routes.draw do
+  resources :derpus
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

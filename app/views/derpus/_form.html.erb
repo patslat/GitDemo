@@ -1,0 +1,17 @@
+<%= form_for(@derpu) do |f| %>
+  <% if @derpu.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@derpu.errors.count, "error") %> prohibited this derpu from being saved:</h2>
+
+      <ul>
+      <% @derpu.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

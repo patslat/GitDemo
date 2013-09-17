@@ -1,0 +1,21 @@
+<h1>Listing derpus</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @derpus.each do |derpu| %>
+  <tr>
+    <td><%= link_to 'Show', derpu %></td>
+    <td><%= link_to 'Edit', edit_derpu_path(derpu) %></td>
+    <td><%= link_to 'Destroy', derpu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Derpu', new_derpu_path %>
