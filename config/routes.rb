@@ -1,5 +1,6 @@
 Gitdemo::Application.routes.draw do
   resources :derpus
+  resources :dogs
 
 
   # The priority is based upon order of creation:
