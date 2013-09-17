@@ -1,0 +1,17 @@
+<%= form_for(@potato) do |f| %>
+  <% if @potato.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@potato.errors.count, "error") %> prohibited this potato from being saved:</h2>
+
+      <ul>
+      <% @potato.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
